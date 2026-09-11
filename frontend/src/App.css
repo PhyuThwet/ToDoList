@@ -17,33 +17,36 @@ body {
 }
 
 .app-container {
-  min-width: 1000px;
+  width:80%;
+  max-width: 1000px;
   margin: 40px auto;
   padding: 30px;
   background-color: var(--border-color);
   border-radius: 12px;
 }
 h1{
-  font-size: 20;
   font-weight: bold;
+  color: #7c9ab9;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   margin-top: 0px;
 }
 
 .tabs {
+  
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
   background-color: var(--primary-color);
   padding: 10px;
-  border-radius: 6px;
+  border-radius: 10px;
 }
 
 .tab-btn {
   background-color: lightblue;
   border:none;
   padding: 8px 12px;
-  border-radius: 3px;
+  border-radius: 10px;
+  border-color: #7c9ab9;
   font-size: 20px;  
   font-weight: bold; 
 }
@@ -87,12 +90,11 @@ h1{
 
 .task-item.completed {
   background-color: #f8f9fa;
-  opacity: 0.7;
 }
 
 .task-item input[type="checkbox"]:disabled {
   cursor: not-allowed;
-  opacity: 0.6;
+
 }
 
 .task-item input[type="checkbox"] {
@@ -121,18 +123,6 @@ h2 {
   cursor: pointer; 
         
 }
-/* .add-btn {
-  display: block;
-  width: 100%;
-  background-color: var(--primary-color);
-  color: var(--bg-color);
-  margin-bottom: 24px;
-  padding: 12px;
-}
-
-.add-btn:hover {
-  background-color: var(--primary-hover);
-} */
 
 .btn-edit {
   padding: 6px 12px;
@@ -173,7 +163,6 @@ h2 {
    padding: 6px 12px;
   font-size: 20px;
   margin-left: 8px;
-  white-space: nowrap;
   background-color:red;
   color: var(--border-color);   
 }
@@ -257,4 +246,48 @@ h2 {
 
 .form-actions .btn {
   flex: 1;                      
+}
+
+
+@media (max-width: 1000px) {
+  .app-container {
+    margin: 20px 12px;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .tabs {
+    padding: 10px;
+  }
+
+  .tab-btn {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .task-item {
+    padding: 12px;
+  }
+
+  .btn-edit,
+  .btn-cancle,
+  .btn-delete {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  .form-card {
+    padding: 30px;
+  }
+
+  .form-group label {
+    font-size: 18px;
+  }
+
+  .btn-save {
+    font-size: 16px;
+  }
 }
