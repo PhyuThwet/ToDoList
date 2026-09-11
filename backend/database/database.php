@@ -14,6 +14,11 @@
 
 try {
     $pdo = new PDO($dsn, $user, $pass, $options);
+ echo "connect";
+    $sql="CREATE TABLE app.todo(id INT PRIMARY KEY ,title VARCHAR (255) NOT NULl,category VARCHAR(100) NOT NULL,deadline DATE NOT NULl,isComplete TINYINT NOT NULL DEFAULT 0)";
+    $pdo->exec($sql);
+    echo "Table create successfully!";
+
 } catch (PDOException $e) {
     throw new PDOException($e->getMessage(), (int)$e->getCode());
 }

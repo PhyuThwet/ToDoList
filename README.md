@@ -73,3 +73,8 @@ php -S 0.0.0.0:8000 -t backend
 ```
 
 Open <http://localhost:8000>.
+
+
+database table create
+cd backend/database
+php database.php

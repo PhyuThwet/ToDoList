@@ -130,7 +130,7 @@ const App: React.FC = () => {
   const formatDeadline = (deadline: string) => {
     if (!deadline) return '';
     const today = new Date();
-    today.setHours(0, 0, 0);
+    today.setHours(0, 0, 0,0);
     const d = new Date(`${deadline}T00:00:00`);
     const diffDays = Math.round((d.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));
     if (diffDays === 0) return 'Today';
@@ -154,8 +154,8 @@ const App: React.FC = () => {
 
           <div className="tabs">
             <button className={`tab-btn ${filter === 'all' ? 'active' : ''}`} onClick={() => setFilter('all')}>All</button>
-            <button className={`tab-btn ${filter === 'incomplete' ? 'active' : ''}`} onClick={() => setFilter('incomplete')}>uncomplete</button>
-            <button className={`tab-btn ${filter === 'complete' ? 'active' : ''}`} onClick={() => setFilter('complete')}>complete</button>
+            <button className={`tab-btn ${filter === 'incomplete' ? 'active' : ''}`} onClick={() => setFilter('incomplete')}>Uncomplete</button>
+            <button className={`tab-btn ${filter === 'complete' ? 'active' : ''}`} onClick={() => setFilter('complete')}>Complete</button>
           </div>
 
           <ul className="task-list">
@@ -224,7 +224,7 @@ const App: React.FC = () => {
           </div>
 
           <div className="form-group">
-            <label>deadline</label>
+            <label>Deadline</label>
             <input
               type="date"
               min={getToday()}
